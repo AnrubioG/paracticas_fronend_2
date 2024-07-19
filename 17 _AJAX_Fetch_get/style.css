@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+
+:root {
+  --primary: #7898ff;
+  --secondary: #8e64c5;
+  --app-grey: #f2f2f2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background: linear-gradient(110deg, var(--primary), var(--secondary));
+}
+h1 {
+  padding: 15px;
+  color: #f2f2f2;
+  text-align: center;
+}
+main {
+  background-color: white;
+  text-align: center;
+  width: 400px;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 20px;
+}
+main button {
+  padding: 5px 15px;
+  margin: 15px 0;
+}
+main img {
+  width: 100%;
+}
+
+button {
+  background: linear-gradient(110deg, var(--primary), var(--secondary));
+  border: none;
+  padding: 0.3rem;
+  border-radius: 50vh;
+  font-weight: bold;
+  color: white;
+}
+
+.card {
+  border: 1px solid #3f3f3f;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  margin: 1.5vw;
+  padding: 1.5rem;
+}
+
+.card:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.card img {
+  width: 80%;
+}
+
+.error {
+  color: red;
+}
+
+/* 
+    Loading
+*/
+.oculto {
+  display: none;
+}
+.visible {
+  display: block;
+}
+#loading {
+  height: 100%;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999999999999999999999;
+}
+.bokeh {
+  border: 0.01em solid rgba(150, 150, 150, 0.1);
+  border-radius: 50%;
+  font-size: 100px;
+  height: 1em;
+  list-style: outside none none;
+  margin: 0 auto;
+  position: relative;
+  top: 35%;
+  width: 1em;
+  z-index: 2147483647;
+}
+.bokeh li {
+  border-radius: 50%;
+  height: 0.2em;
+  position: absolute;
+  width: 0.2em;
+}
+.bokeh li:nth-child(1) {
+  animation: 1.13s linear 0s normal none infinite running rota,
+    3.67s ease-in-out 0s alternate none infinite running opa;
+  background: #00b16a none repeat scroll 0 0;
+  left: 50%;
+  margin: 0 0 0 -0.1em;
+  top: 0;
+  transform-origin: 50% 250% 0;
+}
+
+.bokeh li:nth-child(2) {
+  animation: 1.86s linear 0s normal none infinite running rota,
+    4.29s ease-in-out 0s alternate none infinite running opa;
+  background: #f64747 none repeat scroll 0 0;
+  margin: -0.1em 0 0;
+  right: 0;
+  top: 50%;
+  transform-origin: -150% 50% 0;
+}
+.bokeh li:nth-child(3) {
+  animation: 1.45s linear 0s normal none infinite running rota,
+    5.12s ease-in-out 0s alternate none infinite running opa;
+  background: #ff9704 none repeat scroll 0 0;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 0 -0.1em;
+  transform-origin: 50% -150% 0;
+}
+.bokeh li:nth-child(4) {
+  animation: 1.72s linear 0s normal none infinite running rota,
+    5.25s ease-in-out 0s alternate none infinite running opa;
+  background: #22a7f0 none repeat scroll 0 0;
+  margin: -0.1em 0 0;
+  top: 50%;
+  transform-origin: 250% 50% 0;
+}
+@keyframes opa {
+  12% {
+    opacity: 0.8;
+  }
+  19.5% {
+    opacity: 0.88;
+  }
+  37.2% {
+    opacity: 0.64;
+  }
+  40.5% {
+    opacity: 0.52;
+  }
+  52.7% {
+    opacity: 0.69;
+  }
+  60.2% {
+    opacity: 0.6;
+  }
+  66.6% {
+    opacity: 0.52;
+  }
+  70% {
+    opacity: 0.63;
+  }
+  79.9% {
+    opacity: 0.6;
+  }
+  84.2% {
+    opacity: 0.75;
+  }
+  91% {
+    opacity: 0.87;
+  }
+}
+
+@keyframes rota {
+  100% {
+    transform: rotate(360deg);
+  }
+}
